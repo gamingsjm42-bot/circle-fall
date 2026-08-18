@@ -6,7 +6,7 @@
 #define g 9.81
 #define reauAir 1.204
 /// @brief that struct return circle
-class Circle
+struct Circle
 {
     //radius
     float radius;
@@ -30,34 +30,55 @@ class Circle
     //s
     //
     public:
-    Circle(float r,sf::Vector2f defaultPos=sf::Vector2f(0.f,0.f))
+    void setParameters(float r,sf::Vector2f defaultPos=sf::Vector2f(0.f,0.f))
     {
         //set radius
         radius = r;
         //
         shape = sf::CircleShape(r);
+        shape.setFillColor(sf::Color::Black);
         //
         shape.setPosition(defaultPos);
     }
+    Circle(){}
     //
     void move(float t){shape.move(sf::Vector2f(0,-v(t)));}
     /// @brief 
     /// @param wnd 
     void draw(sf::RenderWindow& wnd){wnd.draw(shape);}
+    void setRadius(float r){radius = r;}
 };
+
 //
 float Circle::airViscosti = 1.8*pow(10,-5),Circle::reau = 1.2;
 //
 sf::CircleShape Body(20);
 //
 int main()
-{
+{ 
+    sf::Clock time;sf::Time t;float r=1;Circle circles[999];size_t lencircles = 0;
+    std::cout<<"Press Enter 0 to Stop\n";
+   int a= 3,b=2;;
+    //Circle Var
+    while ( r!=0)
+    {
+        //add len
+        //print message & input
+        std::cout<<"Enter Radius from Circle"<<lencircles+1<<':'<<std::endl;
+        std::cin>>r;
+        //add circle
+        circles[lencircles].setParameters(r,sf::Vector2f((2*lencircles*r+10),(0)));
+        lencircles++;
+    }
+    //isSlow var
+    bool isSlow;
+    //print is slow
+    std::cout<<"Enter 0 to speed and enter auther to Slowest\n";
+    //input
+    std::cin>>isSlow;
     //set sfml
     sf::RenderWindow wnd(sf::VideoMode(sf::VideoMode::getDesktopMode()),"simulation",sf::State::Fullscreen);
     //set time vars
-    sf::Clock time;sf::Time t;
-    //Circle Var
-    Circle circle(40.0f,sf::Vector2f(0,0));
     //set infinit while loop
     while (wnd.isOpen())
     {
@@ -70,12 +91,13 @@ int main()
             if(event->is<sf::Event::Closed>())wnd.close();
         }
         wnd.setFramerateLimit(60);
-        circle.draw(wnd);
+        //draw circles
+        for (size_t i = 0; i < lencircles; i++) circles[i].draw(wnd); 
         //display wnd
         wnd.display();
         wnd.clear(sf::Color::Red);
         //set move
-        circle.move(t.asMilliseconds());
+         for (size_t i = 0; i < lencircles; i++) circles[i].move((isSlow)? t.asSeconds():t.asMilliseconds());
     }
     
 }
