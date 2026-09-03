@@ -16,3 +16,5 @@
 <h3>$$\cfrac {-g \cdot V_f \cdot \rho_f}{m} + g - \cfrac{k \cdot v}{m}  = \cfrac{dv}{dt}$$</h3>
 <h3>$$add 2 sides   \cfrac{k \cdot v}{m}$$</h3>
 <h3>$$\cfrac {-g \cdot V_f \cdot \rho_f}{m} + g  = \cfrac{dv}{dt}+ \cfrac{k \cdot v}{m}$$</h3>
+<h3>$$\exists a ,b \in R^2 a \dot v + \frac{dv}{dt}= b -> \forall t \in R v(t)= v_0(1-e^ \frac {t}{\tau})$$</h3>
+<h3> $$\tau = \frac{m}{k} |and|  $$</h3>
