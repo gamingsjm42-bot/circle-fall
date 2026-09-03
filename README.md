@@ -21,5 +21,5 @@
 <h3>that function return v(t) while get r and v and k are functions</h3>
 <h1>Programing side:</h1>
 <
-<p>i create a class circle by radius and numofPoint= 30 <br>
+<p>i create a <strong>class circle<storng> is define by <stong> radius </stong>and <strong>numofPoint</strong>= 30 <br>
 and i was created functions like Circle::m Circle::Teau ($\tau$) Circle::k() and final</p>
