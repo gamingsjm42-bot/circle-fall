@@ -71,7 +71,7 @@ int main()
         lencircles++;
     }
     //set t function
-    float t =0;
+    duble t =0;
     //isSlow var
     bool isSlow;
     //print is slow
@@ -89,7 +89,7 @@ int main()
         //set dt
         dt=tFinal-tInitial
         //update t
-        t= +=dt;
+        t+=dt;
         //set tf
         auto tFinal= tInitial;
         //set event
