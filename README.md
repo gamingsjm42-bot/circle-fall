@@ -32,3 +32,7 @@ and i create Circle::v()=Circle::v_lim*(1-exp(-t/Circle::Teau))
   <li>circles sf::Circle[999] that circles</li>
   <li>sizeofCircles  size_t is number of Circles</li>
 </ul>
+<h2>input</h2>
+<ul>
+  <li>i create a bool for number and i create cin if bool is 0 stop</li>
+</ul>
