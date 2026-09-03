@@ -20,6 +20,12 @@
 <h3> $$\tau = \frac{m}{k} |and| k=6 \dot \pi \dot r^2 \, and \, m= \rho \dot v $$</h3>
 <h3>that function return v(t) while get r and v and k are functions</h3>
 <h1>Programing side:</h1>
-<
+<h2>Class circle:</h2>
 <p>i create a <strong>class circle<storng> is define by <stong> radius </stong>and <strong>numofPoint</strong>= 30 <br>
-and i was created functions like Circle::m Circle::Teau ($\tau$) Circle::k and final </p>
+and i was created functions like Circle::m Circle::Teau ($\tau$) Circle::k and Circle::v_lim final <br>
+and i create Circle::v()=Circle::v_lim*(1-exp(-t/Circle::Teau))
+</p>
+<h2>mainloop:</h2>
+<p>
+  i create a window app var 
+</p>
