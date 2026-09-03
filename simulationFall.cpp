@@ -10,7 +10,7 @@ struct Circle
 {
     //radius
     float radius;
-    //
+    //shape
     sf::CircleShape shape;
     //air?
     static float airViscosti,reau;
@@ -56,7 +56,7 @@ sf::CircleShape Body(20);
 //
 int main()
 { 
-    sf::Clock time;sf::Time t;float r=1;Circle circles[999];size_t lencircles = 0;
+    sf::Clock time;sf::Time dt;float r=1;Circle circles[999];size_t lencircles = 0;
     std::cout<<"Press Enter 0 to Stop\n";
    int a= 3,b=2;;
     //Circle Var
@@ -70,6 +70,8 @@ int main()
         circles[lencircles].setParameters(r,sf::Vector2f((2*lencircles*r+10),(0)));
         lencircles++;
     }
+    //set t function
+    float t =0;
     //isSlow var
     bool isSlow;
     //print is slow
@@ -81,9 +83,15 @@ int main()
     //set time vars
     //set infinit while loop
     while (wnd.isOpen())
-    {
+    {   
+        //set ti
+         auto tInitial = std::chrono::high_resolution_clock::now();
+        //set dt
+        dt=tFinal-tInitial
         //update t
-        t= time.getElapsedTime();
+        t= +=dt;
+        //set tf
+        auto tFinal= tInitial;
         //set event
         while (std::optional event =wnd.pollEvent())
         {
