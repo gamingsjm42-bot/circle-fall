@@ -34,5 +34,11 @@ and i create Circle::v()=Circle::v_lim*(1-exp(-t/Circle::Teau))
 </ul>
 <h2>input</h2>
 <ul>
-  <li>i create a bool for number and i create cin if bool is 0 stop</li>
+  <li>i create a float variable is r for number and i set it r if  0 stop else add sf::Circles circle with a radian r</li>
 </ul>
+ <h2>while loop:</h2>
+<li> i draw a circle by circle by circle and move it by circle.v()</li>
+<h1>How it Work:</h1>
+<h3> input a r and add circle with radiant while r $$\neq$$ 0</h3>
+<h3>input is Slowest if you set 0 that set  fast else set slow</h3>
+<h3>that do a circle fall image</h3>
