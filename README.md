@@ -22,4 +22,4 @@
 <h1>Programing side:</h1>
 <
 <p>i create a <strong>class circle<storng> is define by <stong> radius </stong>and <strong>numofPoint</strong>= 30 <br>
-and i was created functions like Circle::m Circle::Teau ($\tau$) Circle::k() and final</p>
+and i was created functions like Circle::m Circle::Teau ($\tau$) Circle::k and final </p>
