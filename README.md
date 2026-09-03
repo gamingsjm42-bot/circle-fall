@@ -26,6 +26,9 @@ and i was created functions like Circle::m Circle::Teau ($\tau$) Circle::k and C
 and i create Circle::v()=Circle::v_lim*(1-exp(-t/Circle::Teau))
 </p>
 <h2>mainloop:</h2>
-<p>
-  i create a window app var 
-</p>
+<h3>i create a window app vars likes:</h3>
+<ul>
+  <li>t sf::Clock is time between start and t</li>
+  <li>circles sf::Circle[999] that circles</li>
+  <li>sizeofCircles  size_t is number of Circles</li>
+</ul>
